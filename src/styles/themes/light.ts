@@ -3,8 +3,9 @@ export default {
 
   colors: {
     primary: "#fff",
-    secondary: "#f1f1f1",
+    secondary: "#91e1ff",
 
-    background: "#f5f5f5"
+    background: "#f5f5f5",
+    text: "#fff"
   }
 };

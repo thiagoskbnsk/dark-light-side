@@ -8,6 +8,8 @@ import dark from "./styles/themes/dark";
 import GlobalStyle from "./styles/global";
 import Header from "./components/Header";
 
+import { Content, Plasma, Label, Check, Saber, Side } from "./styles";
+
 const App = () => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", light);
 
@@ -20,6 +22,22 @@ const App = () => {
       <div>
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
+        <Content>
+          <Side>
+            <Saber>
+              <Label />
+              <Check type="checkbox" checked={theme.title !== "light"} />
+              <Plasma color="dark" />
+            </Saber>
+          </Side>
+          <Side>
+            <Saber>
+              <Label />
+              <Check type="checkbox" checked={theme.title === "light"} />
+              <Plasma color="light" />
+            </Saber>
+          </Side>
+        </Content>
       </div>
     </ThemeProvider>
   );

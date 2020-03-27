@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from "styled-components";
-import { shade } from "polished";
 
 import { Container } from "./styles";
 
@@ -14,7 +13,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <Container>
-      Hello
+      {title === "dark" ? "Dark Side" : "Light Side"}
       <Switch
         onChange={toggleTheme}
         checked={title === "dark"}
@@ -23,8 +22,8 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         height={10}
         width={40}
         handleDiameter={20}
-        offColor={shade(0.1, colors.primary)}
-        onColor={colors.secondary}
+        offColor={colors.background}
+        onColor={colors.background}
       />
     </Container>
   );

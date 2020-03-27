@@ -10,5 +10,8 @@ export default createGlobalStyle`
     body {
         background: ${props => props.theme.colors.background};
         font-size: 14px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        color: ${props => props.theme.colors.text};
     }
 `;
